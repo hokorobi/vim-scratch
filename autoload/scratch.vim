@@ -45,7 +45,7 @@ function! scratch#open()  "{{{2
     let &l:bufhidden = 'hide'
     hide enew
     setlocal bufhidden=hide buflisted buftype=nofile noswapfile
-    file `=g:scratch_buffer_name`
+    call execute('file {g:scratch_buffer_name}')
     let s:bufnr = bufnr('%')
 
     " Initialize the scratch buffer.
